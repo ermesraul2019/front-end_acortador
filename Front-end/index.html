@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acortador de URLs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>🔗 Acortador de URLs</h1>
+
+    <form id="shorten-form" novalidate>
+      <input
+        type="url"
+        id="url-input"
+        placeholder="Pega aquí tu enlace"
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Acortar</button>
+    </form>
+
+    <div id="result" class="hidden">
+      <p>Tu enlace acortado:</p>
+
+      <div class="short-link">
+        <input
+          type="text"
+          id="short-url"
+          readonly
+          aria-label="Enlace acortado"
+        />
+        <button id="copy-btn">Copiar</button>
+      </div>
+
+      <p id="error-msg" class="error hidden"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
